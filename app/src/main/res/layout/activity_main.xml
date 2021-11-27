@@ -7,12 +7,18 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/mainText"
         android:layout_width="321dp"
         android:layout_height="103dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="314dp"
         android:text="Hello User!"
         android:textAlignment="center"
         android:textSize="60sp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="314dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

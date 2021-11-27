@@ -10,43 +10,67 @@
         android:id="@+id/registerEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
         android:hint="email"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="129dp" />
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/registerPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="200dp" />
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerButton"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="90dp"
         android:background="#8EACBA"
+        android:textColor="#4E342E"
         app:backgroundTint="#B1B1B1"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="289dp"
+        app:layout_constraintBottom_toTopOf="@+id/noAccountText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword"
         tools:text="Login" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/noAccountText"
         android:layout_width="134dp"
         android:layout_height="37dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="347dp"
         android:text="Don't Have Account? \nRegister now!"
         android:textAlignment="center"
         android:textColor="#1E88E5"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="347dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
