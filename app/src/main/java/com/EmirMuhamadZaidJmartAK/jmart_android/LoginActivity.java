@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.EmirMuhamadZaidJmartAK.jmart_android.model.Account;
@@ -21,21 +22,21 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
-    private static Account loggedAccount;
+    private static Account loggedAccount = null;
 
     public static Account getLoggedAccount(){
         return loggedAccount;
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        EditText textemail = findViewById(R.id.registerEmail);
-        EditText textpassword = findViewById(R.id.registerPassword);
-        Button buttonlogin = findViewById(R.id.registerButton);
-        buttonlogin.setOnClickListener(new View.OnClickListener() {
+
+        EditText email = findViewById(R.id.loginEmail);
+        EditText password = findViewById(R.id.loginPassword);
+        Button button = findViewById(R.id.loginButton);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Response.Listener<String> listener = new Response.Listener<String>() {
@@ -56,9 +57,17 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 };
-                LoginRequest loginRequest = new LoginRequest(textemail.getText().toString(), textpassword.getText().toString(), listener, null);
+                LoginRequest loginRequest = new LoginRequest(email.getText().toString(), password.getText().toString(), listener, null);
                 RequestQueue requestQueue = Volley.newRequestQueue(LoginActivity.this);
                 requestQueue.add(loginRequest);
+            }
+        });
+        TextView register = findViewById(R.id.noAccountText);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }

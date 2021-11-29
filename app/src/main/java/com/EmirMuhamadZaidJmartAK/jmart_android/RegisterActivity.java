@@ -19,7 +19,9 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class RegisterActivity extends AppCompatActivity {
+
     private static final Gson gson = new Gson();
     private static Account loggedAccount = null;
 
