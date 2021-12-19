@@ -1,7 +1,13 @@
 package com.EmirMuhamadZaidJmartAK.jmart_android;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.google.android.material.internal.ContextUtils.getActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,9 +26,14 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+
+
+
 public class LoginActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
     private static Account loggedAccount = null;
+
 
     public static Account getLoggedAccount(){
         return loggedAccount;
@@ -71,4 +82,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

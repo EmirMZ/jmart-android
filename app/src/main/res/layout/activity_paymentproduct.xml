@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:textAlignment="center"
+    tools:context=".PaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"><![CDATA[>
+
+        ]]>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginVertical="12dp"
+            android:background="@color/Blue"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/NamePayment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:textAlignment="textStart"
+                android:textColor="@color/Blue"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="185dp"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:text="Shipment Plan"
+                android:textColor="@color/Blue"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/ShipmentPayment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:textAlignment="textEnd"
+                android:textColor="@color/Blue"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/black"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="Amount"
+                android:textColor="@color/Blue"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/payment_product_count"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Blue"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@color/Blue"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Address"
+                android:textColor="@color/Blue"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/address_payment"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Blue"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@color/Blue" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/PricePayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="0px"
+            android:background="@color/black"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Blue"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/OrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/Blue"
+            android:backgroundTint="@color/Blue"
+            android:backgroundTintMode="add"
+            android:text="Order"
+            android:textColorLink="@color/Blue"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="657dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/black"
-    tools:context=".MainActivity">
+    android:background="#FFFFFF"
+    tools:context=".AccountActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/selectionTab"
@@ -19,12 +19,12 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Product" />
+            android:text="About Me" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Filter" />
+            android:text="My Store" />
 
     </com.google.android.material.tabs.TabLayout>
 

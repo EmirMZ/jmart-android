@@ -16,7 +16,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/ButtonPrev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
@@ -24,7 +24,7 @@
                 android:text="prev" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/ButtonNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
@@ -32,7 +32,7 @@
                 android:text="Next" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/InputPageProduct"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -42,7 +42,7 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/ButtonGo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
@@ -52,10 +52,11 @@
         </LinearLayout>
 
         <ListView
-            android:id="@+id/list_product"
+            android:id="@+id/ProductListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
     </LinearLayout>
+
 </FrameLayout>

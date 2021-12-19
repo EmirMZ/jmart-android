@@ -1,5 +1,10 @@
 package com.EmirMuhamadZaidJmartAK.jmart_android;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,14 +12,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class AccountActivity extends AppCompatActivity {
+
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -22,36 +23,35 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_account);
 
         tabLayout = findViewById(R.id.selectionTab);
         viewPager = findViewById(R.id.viewpager);
 
         tabLayout.setupWithViewPager(viewPager);
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        vpAdapter.addFragment(new ProductFragment(), "PRODUCT");
-        vpAdapter.addFragment(new FilterFragment(), "FILTER");
+        vpAdapter.addFragment(new AboutMeFragment(), "ABOUT ME");
+        vpAdapter.addFragment(new InvoiceFragment(), "MY STORE");
         viewPager.setAdapter(vpAdapter);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.top_menu, menu);
+        inflater.inflate(R.menu.top_menu_account, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.account_button) {
-            Toast.makeText(this, "Account Selected", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+            Toast.makeText(this, "About Me Selected", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(AccountActivity.this, AboutMeFragment.class);
             startActivity(intent);
         }
         if (item.getItemId() == R.id.add_button) {
-            Toast.makeText(this, "Create Product Selected", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, CreateProductActivity.class);
-            finish();
+            Toast.makeText(this, "Store Info Selected", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(AccountActivity.this, CreateProductActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

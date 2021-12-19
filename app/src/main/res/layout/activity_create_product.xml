@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".CreateProductActivity">
 
     <LinearLayout
@@ -15,41 +16,56 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
             android:text="Create Product"
+            android:textColor="@color/Blue"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/Blue"
             android:ems="10"
             android:hint="Name"
-            android:inputType="textPersonName"
+            android:inputType="text"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Blue"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/Blue"
             android:ems="10"
             android:hint="Weight"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Blue" />
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/Blue"
             android:ems="10"
             android:hint="Price"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Blue" />
 
         <EditText
             android:id="@+id/editTextTextPersonName4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/Blue"
             android:ems="10"
             android:hint="Discount"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Blue" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Condition"
+                android:textColor="@color/Blue"
                 android:textSize="20sp" />
 
             <CheckBox
@@ -69,14 +86,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New" />
+                android:text="New"
+                android:textColor="@color/Blue" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Used" />
+                android:text="Used"
+                android:textColor="@color/Blue" />
         </LinearLayout>
 
         <LinearLayout
@@ -90,6 +109,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Category"
+                android:textColor="@color/Blue"
+                android:textColorHint="@color/Blue"
                 android:textSize="20sp" />
 
             <Spinner
@@ -97,6 +118,7 @@
                 android:layout_width="6dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@color/Blue"
                 android:entries="@array/productCategory" />
         </LinearLayout>
 
@@ -110,7 +132,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/black"
                 android:text="Shipment Plan"
+                android:textColor="@color/Blue"
+                android:textColorHint="@color/Blue"
                 android:textSize="20sp" />
 
             <Spinner
@@ -118,6 +143,7 @@
                 android:layout_width="51dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@color/Blue"
                 android:entries="@array/shipmentPlans" />
         </LinearLayout>
 
@@ -130,17 +156,17 @@
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:text="Create"
-                android:layout_marginHorizontal="5dp"/>
+                android:text="Create" />
 
             <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:text="Cancel"
-                android:layout_marginHorizontal="5dp"/>
+                android:text="Cancel" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
