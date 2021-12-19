@@ -8,6 +8,11 @@ import com.EmirMuhamadZaidJmartAK.jmart_android.LoginActivity;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * RegisterStoreRequest class
+ *
+ * create a request to create  a store based on URL and the paramater provided
+ */
 public class RegisterStoreRequest extends StringRequest {
     private static final String URL =  "http://10.0.2.2:6970/account/" + LoginActivity.getLoggedAccount().id + "/registerStore";
     private final Map<String , String> params;
@@ -21,7 +26,10 @@ public class RegisterStoreRequest extends StringRequest {
         params.put("address", address);
         params.put("phoneNumber", phoneNumber);
     }
-
+    /**
+     * return the paramater used to create the request
+     * @return
+     */
     public Map<String , String> getParams() {
         return params;
     }

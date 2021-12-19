@@ -18,10 +18,21 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+/**
+ * About Me Fragment class
+ *
+ * contains name, email, balance, and top up menu for an account
+ */
 
 public class AboutMeFragment extends Fragment {
 
-
+    /**
+     * create view when class is intended
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,9 +51,16 @@ public class AboutMeFragment extends Fragment {
         EditText topUpInput =  accountView.findViewById(R.id.topupInputAccount);
         Button buttonTopUp = accountView.findViewById(R.id.topupBottonAccount);
 
+        /**
+         * do the top up request
+         */
         buttonTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * actually send the top  up request
+                 *
+                 */
                 Response.Listener<String> listener1 = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -54,6 +72,9 @@ public class AboutMeFragment extends Fragment {
                         //LoginActivity.getLoggedAccount().balance += Double.parseDouble(topUpInput.getText().toString());
                     }
                 };
+                /**
+                 * get the balance directly from backend
+                 */
                 Response.Listener<String> listener2 = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

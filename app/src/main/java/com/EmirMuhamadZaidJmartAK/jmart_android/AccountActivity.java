@@ -14,6 +14,11 @@ import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * AccountActivity class
+ * contains 1 fragment
+ * the AboutMeFragment
+ */
 public class AccountActivity extends AppCompatActivity {
 
 
@@ -31,7 +36,7 @@ public class AccountActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new AboutMeFragment(), "ABOUT ME");
-        vpAdapter.addFragment(new InvoiceFragment(), "MY STORE");
+        vpAdapter.addFragment(new StoreFragment(), "MY STORE");
         viewPager.setAdapter(vpAdapter);
     }
 
@@ -51,7 +56,7 @@ public class AccountActivity extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.add_button) {
             Toast.makeText(this, "Store Info Selected", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(AccountActivity.this, CreateProductActivity.class);
+            Intent intent = new Intent(AccountActivity.this, StoreFragment.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

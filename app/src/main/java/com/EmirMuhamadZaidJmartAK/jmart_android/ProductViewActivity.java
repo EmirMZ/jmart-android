@@ -11,6 +11,10 @@ import android.widget.TextView;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ *
+ * if the product fragment is selcted, this activity comes out
+ */
 public class ProductViewActivity extends AppCompatActivity {
 
     @Override

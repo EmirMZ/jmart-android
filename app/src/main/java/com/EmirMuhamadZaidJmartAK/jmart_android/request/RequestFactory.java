@@ -7,6 +7,11 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * RequestFactory class
+ *
+ * create a page request based on URL and the paramater provided
+ */
 public class RequestFactory
 {
     private static final String URL_FORMAT_ID = "http://10.0.2.2:6969/%s/%d";
@@ -22,6 +27,16 @@ public class RequestFactory
         String url = String.format(URL_FORMAT_ID, parentURI, id);
         return new StringRequest(Request.Method.GET, url, listener, errorListener);
     }
+
+    /**
+     * the request to get the page
+     * @param parentURI
+     * @param page
+     * @param pageSize
+     * @param listener
+     * @param errorListener
+     * @return
+     */
     public static StringRequest getPage
             (
                     String parentURI,

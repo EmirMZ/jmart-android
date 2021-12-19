@@ -6,10 +6,22 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LoginRequest class
+ *
+ * create a login request based on URL and the paramater provided
+ */
 public class LoginRequest extends StringRequest {
     private static final String URL = "http://10.0.2.2:6969/account/login" ;
     private final Map<String,String> params;
 
+    /**
+     * loginrequest constructor
+     * @param email
+     * @param password
+     * @param listener
+     * @param errorListener
+     */
     public LoginRequest(String email, String password, Response.Listener<String> listener,
                         Response.ErrorListener errorListener)
     {
@@ -18,6 +30,11 @@ public class LoginRequest extends StringRequest {
         params.put("email", email);
         params.put("password", password);
     }
+
+    /**
+     * getting paramaters that has been put in the Loginrequest constructor
+     * @return
+     */
     public Map<String,String> getParams(){
         return params;
     }

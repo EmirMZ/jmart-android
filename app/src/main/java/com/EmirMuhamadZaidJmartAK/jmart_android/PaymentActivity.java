@@ -18,6 +18,9 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Payment activity class
+ */
 public class PaymentActivity extends AppCompatActivity {
 
     private static final Gson gson = new Gson();

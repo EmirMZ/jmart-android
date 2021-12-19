@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+/**
+ * CreateProductActivity
+ */
 public class CreateProductActivity extends AppCompatActivity {
 
     @Override

@@ -14,11 +14,19 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ *  MAIN ACTIVITY AFTER LOGIN
+ *  2 fragments, product and filter
+ */
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+    /**
+     * init when created
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(vpAdapter);
     }
 
+    /**
+     * inflate the menu
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -41,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * top button for create product and stuff
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.account_button) {

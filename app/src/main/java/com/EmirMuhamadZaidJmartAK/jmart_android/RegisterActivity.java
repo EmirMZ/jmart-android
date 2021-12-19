@@ -20,7 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /***
- * RegisterAc
+ * RegisterAcounnt
  */
 
 public class RegisterActivity extends AppCompatActivity {

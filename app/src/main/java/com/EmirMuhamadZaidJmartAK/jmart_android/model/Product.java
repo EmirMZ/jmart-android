@@ -1,5 +1,8 @@
 package com.EmirMuhamadZaidJmartAK.jmart_android.model;
 
+/**
+ * Product Class Model
+ */
 public class Product extends Serializable
 {
     public int accountId;

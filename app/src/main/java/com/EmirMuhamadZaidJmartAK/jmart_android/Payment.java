@@ -3,6 +3,9 @@ package com.EmirMuhamadZaidJmartAK.jmart_android;
 import java.util.ArrayList;
 import java.util.Date;
 
+/***
+ * payment class for payment objects
+ */
 public class Payment extends Invoice{
     public Shipment shipment;
     public int productCount;

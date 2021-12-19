@@ -40,6 +40,9 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 
+/**
+ * product fragment class with viewpage to manage the list
+ */
 public class ProductFragment extends Fragment {
     private static final Gson gson = new Gson();
     public static ArrayList<Product> productsList = new ArrayList<>();

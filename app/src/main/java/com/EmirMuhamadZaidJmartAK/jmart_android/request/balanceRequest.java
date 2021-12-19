@@ -7,10 +7,21 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * balanceRequest
+ *
+ * create a request based on URL and the paramater provided
+ */
 public class balanceRequest extends StringRequest {
     private static final String URL =  "http://10.0.2.2:6969/account/"  + LoginActivity.getLoggedAccount().id + "/checkbalance";
     private final Map<String , String> params;
 
+    /**
+     * balanceRequest Constructor
+     * @param id
+     * @param listener
+     * @param errorListener
+     */
     public balanceRequest
             (
                     int id,
@@ -25,6 +36,10 @@ public class balanceRequest extends StringRequest {
         params.put("id", Integer.toString(id));
     }
 
+    /**
+     * get parameters
+     * @return
+     */
     public Map<String , String> getParams() {
         return params;
     }

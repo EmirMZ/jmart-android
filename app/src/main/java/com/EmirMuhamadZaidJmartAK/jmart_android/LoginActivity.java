@@ -27,14 +27,21 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-
+/**
+ * LoginActivity class
+ *
+ * used for login in the app
+ */
 
 
 public class LoginActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
     private static Account loggedAccount = null;
 
-
+    /**
+     * get the account data
+     * @return
+     */
     public static Account getLoggedAccount(){
         return loggedAccount;
     }
@@ -47,6 +54,10 @@ public class LoginActivity extends AppCompatActivity {
         EditText email = findViewById(R.id.loginEmail);
         EditText password = findViewById(R.id.loginPassword);
         Button button = findViewById(R.id.loginButton);
+
+        /**
+         * do the accountget request
+         */
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +85,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         TextView register = findViewById(R.id.noAccountText);
+        /**
+         * go to registeractivity if the button is pressed
+         */
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
